@@ -1,8 +1,6 @@
 package com.najmcodes.UsersApp.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import java.util.Objects;
 
@@ -10,6 +8,7 @@ import java.util.Objects;
 @Table(name="user_table")
 public class User {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
      private String name;
      private String email;
